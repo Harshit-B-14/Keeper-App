@@ -43,6 +43,11 @@ function App() {
   }
 
   function updateNotes(id, updatedTitle, updatedContent){
+    if ( updatedTitle === "" && updatedContent === "" ){
+      deleteNote(id);
+      return;
+    }
+    
     setNotes((prevNotes) => {
       return prevNotes.map((note)=>{
         if(note.id === id){

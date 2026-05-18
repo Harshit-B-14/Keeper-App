@@ -26,7 +26,7 @@ function Note(props) {
   function handleChangeContent(event){
     let val = event.target.value;
     setUpdatedContent(val);
-
+    
     textareaRef.current.style.height = "auto"; //this means textarea's height is set to auto (style is used to access css properties and textareaRef points to the element textarea)
     textareaRef.current.style.height = 
       textareaRef.current.scrollHeight + "px"; // why didnt we write style here?
